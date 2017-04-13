@@ -1,0 +1,253 @@
+body{
+  padding-top: 0px !important;
+}
+#barra_1{
+  height: 34px;
+  background-color: #000000;
+  width: 100%;
+}
+
+#barra_1 div {
+  padding-top: 7px;
+  padding-left: 65px;
+
+}
+
+.nav-inverse{
+  background-image: none;
+}
+.nav #barra_1{
+  background-color: #000000;
+}
+#barra_1{
+  height: 34px !important;
+}
+#barra_1 span{
+  font-size: 13px !important;
+}
+
+#barra_1 div {
+  padding-top: 7px;
+  padding-left: 65px;
+}
+
+span.gris{
+  color: #8c8c8c;
+}
+
+span.amarillo{
+  color: #edbe33;
+}
+
+#barra_logos div #logo_atc{
+  margin-top: 10px;
+}
+
+#barra_logos div #logo_autodesk{
+  margin-top: 20px;
+}
+
+.navbar-inverse{
+  background-image: none !important;
+  background-color: rgba(237, 237, 237, 0.95) !important;
+  border-color: rgba(237, 237, 237, 0.95) !important;
+}
+
+.navbar-inverse .navbar-nav>.active>a{
+  color: #fff !important;
+}
+
+#main-header a{
+  color: #404344;
+}
+
+#main-menu .last{
+  border-right:  1px solid #cccccc !important;
+}
+
+#main-menu > li{
+  border-left: 1px solid #cccccc !important;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  text-shadow: none;
+}
+
+.nav>li>a{
+  padding: 10px 50px !important;
+}
+
+.main-header{
+  font-size: 20px;
+}
+
+.main-header, #main-header a{
+  height: 52px;
+}
+
+.main-header{
+  min-height: 40px !important;
+  margin-bottom: 0px !important;
+
+}
+
+.container>.navbar-collapse{
+  margin-left: 120px;
+}
+
+#background_principal{
+
+  height: 528px;
+  background: url("../img/background.jpg");
+  background-size: cover;
+}
+
+#formulario{
+  width: 284px;
+  height: 441px;
+  margin-right: 120px;
+  float: right;
+  margin-top: 44px;
+  background-color: #23313c;
+}
+
+#formulario ul{
+  padding-left: 30px !important;
+}
+
+#formulario nav li{
+  padding: 25px 0px;
+  display: inline-block;
+}
+
+
+nav>li > a.btn-perfil,
+nav>li > a.btn-perfil:hover,
+nav>li > a.btn-perfil:focus,
+nav>li > a.btn-perfil:active,
+a.btn-perfil,
+a.btn-perfil:hover,
+a.btn-perfil:focus,
+a.btn-perfil:active {
+  color: #ffffff;
+  border-radius: 0;
+  background-color: #435259;
+  padding: 10px 20px;
+}
+
+nav>li > .btn-registrate,
+nav>li > .btn-registrate:hover,
+nav>li > .btn-registrate:focus,
+nav>li > .btn-registrate:active,
+a.btn-registrate,
+a.btn-registrate:hover,
+a.btn-registrate:focus,
+a.btn-registrate:active {
+  color: #ffffff;
+  background-color: #00cd8e;
+
+}
+
+.subtitulo
+{
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+}
+#formulario ul{
+  margin-bottom: 0px;
+}
+
+#formulario form input{
+  display: inline-block;
+}
+
+#formulario .field-der{
+  margin-left: 5px;
+  margin-right: -5px;
+}
+
+#formulario .field-izq{
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
+#formulario .field{
+  margin-left: -5px;
+  margin-right: -5px;
+  width: 104%;
+}
+#formulario form div{
+  margin-bottom: 10px;
+}
+
+#formulario input{
+  background-color: #23313c !important;
+  border-color: #516269;
+  border-radius: 4px;
+  border-top-color: #516269;
+  border-left-color: #516269;
+  color: #ffffff;
+}
+
+.subtitulo-2{
+  font-size: 11px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.subtitulo-2 em{
+  font-size: 9px;
+}
+
+#formulario form span{
+  color: #627378;
+}
+
+#formulario form .options span{
+  letter-spacing: 0px;
+  font-size: 11px;
+}
+
+.btn-green{
+  color: #ffffff;
+  background-color: #00cd8e;
+  border:none;
+  padding: 10px 66px;
+  margin-left: 15px;
+  margin-right: -15px;
+}
+#menu-software{
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+#menu-software nav li{
+  padding: 10px 39px;
+  display: inline-block;
+  border: 1px solid #0068cf;
+  margin-left: 0px;
+  color: #0068cf;
+  font-weight: 600;
+}
+
+#menu-software nav li.active{
+  background-color: #0068cf;
+  color: #ffffff;
+}
+
+#imgs-cursos img
+{
+  width: 100%;
+}
+
+.btn-blue{
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #0068cf;
+  margin-right: 48px;
+  color: #0068cf;
+  font-weight: 600;
+  font-size: 12px;
+}

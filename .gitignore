@@ -1,0 +1,9 @@
+/public/*
+/log/*.log
+/tmp
+/.idea/*.*
+/.idea
+/config/database.yml
+spring/*.pid
+db/schema.rb
+Gemfile.lock
