@@ -13,70 +13,84 @@
       %div.col-md-2
         %img.img-responsive{:alt => "image", :src => image_path('logo_autodesk.png'), :width => '100%', :id => "logo_autodesk"}
 
-    -#<header id="main-header" class="content-menu main-header">
-    -#  <nav class="navbar" role="navigation">
-    -#    <!-- Brand and toggle get grouped for better mobile display -->
-    -#    <div class="navbar-header">
-    -#      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-    -#        <span class="sr-only">Toggle navigation</span>
-    -#        <span class="icon-bar"></span>
-    -#        <span class="icon-bar"></span>
-    -#        <span class="icon-bar"></span>
-    -#      </button>
-    -#    </div>
-    -#    <!-- Collect the nav links, forms, and other content for toggling -->
-    -#    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    -#      <ul id="main-menu" class="nav nav-pills">
-    -#        <li><a href="index.php">Inicio</a></li>
-    -#    <li><a href="nosotros.php">Nosotros</a></li>
-    -#    <li><a href="contacto.php">Contacto</a></li>
-    -#    <li><a href="contacto.php">Cursos</a></li>
-    -#      <!--li class="dropdown">
-    -#      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cursos <span class="caret"></span></a>
-    -#      <ul class="dropdown-menu" role="menu">
-    -#        <li><a href="maya.php">MAYA</a></li>
-    -#        <li><a href="inventor.php">INVENTOR</a></li>
-    -#        <li><a href="autocad.php">AUTOCAD</a></li>
-    -#        <li><a href="revit.php">REVIT</a></li>
-    -#        <li><a href="civil3d.php">CIVIL 3D</a></li>
-    -#        <li><a href="fusion.php">FUSION 360</a></li>
-    -#          <li><a href="robot.php">ROBOT</a></li>
-    -#      </ul>
-    -#    </li-->
-    -#    <li class="hidden-sm-down last"><a href="certificacion.php">Certificaci&oacute;n</a></li>
-    -#    </ul>
-    -#      </div>
-    -#      <!-- /.navbar-collapse -->
-    -#
-    -#      </nav>
-    -#</header>
-    %div
-      %div#background_principal
-        %div#formulario
-          %nav
-            %ul
-              %li
-                %a.btn-perfil.btn-registrate Reg&iacute;strate
-              %li
-                %a.btn-perfil Iniciar sesi&oacute;n
-          %p#subtitulo Primer Curso  Gratis
+  %nav.navbar.main-header#main-header{role: "navigation" }
+    %div.container
+      .navbar-header
+        %button.navbar-toggle{ "data-toggle"=> "collapse", "data-target"=>"#bs-example-navbar-collapse-1" }
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "#"}
+      %div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.nav-pills#main-menu
+          %li
+            = link_to 'Inicio', root_url
+          %li
+            = link_to 'Nosotros', root_url
+          %li
+            = link_to 'Contacto', root_url
+          %li
+            = link_to 'Cursos', root_url
+          %li.hidden-sm-down.last
+            = link_to 'Certificacion', root_url
+  %div
+    %div#background_principal
+      %div#formulario
+        %nav
+          %ul
+            %li
+              %a.btn-perfil.btn-registrate Reg&iacute;strate
+            %li
+              %a.btn-perfil Iniciar sesi&oacute;n
+        %p.subtitulo Primer Curso  Gratis
+        %form
+          %div.col-sm-12
+            = text_field_tag 'nombre','', {class: 'form-control field-izq col-sm-6', placeholder: "Nombre *"  }
+            = text_field_tag 'apellido','',{class: 'form-control field-der col-sm-6', placeholder: "Apellido *"  }
+          %div.col-sm-12
+            = text_field_tag 'cedula','', {class: 'form-control field-izq col-sm-6', placeholder: "Cedula *"  }
+            = text_field_tag 'telefono','',{class: 'form-control field-der col-sm-6', placeholder: "Telefono *"  }
+          %div.col-sm-12
+            = text_field_tag 'email','', {class: 'form-control field col-sm-12', placeholder: "Correo Electronico *"  }
+          %div.col-sm-12
+            = text_field_tag 'password','', {class: 'form-control field col-sm-12', placeholder: "Contrasena *"  }
+          %div.col-sm-12.options
+            %p.subtitulo-2
+              ¿Qu&eacute; te gustar&iacute;a aprender?
+              %em (Selecciona varias opciones)
+            %div.col-sm-12
+              = check_box_tag('arquitectura','arquitectura',false)
+              %span Software de Arquitectura
+              %br
+              = check_box_tag('arquitectura','arquitectura',false)
+              %span Software de Ingenier&iacute;a y Dise&ntilde;o Industrial
+              %br
+              = check_box_tag('arquitectura','arquitectura',false)
+              %span Software de Animaci&oacute;n 3D
+              %br
+              = check_box_tag('arquitectura','arquitectura',false)
+              %span Curso de Fotograf&iacute;a
+              %br
+              %br
+              %button.btn-green Comienza ahora
+  %div#menu-software.container
+    %nav
+      %ul.items
+        %li.active
+          = link_to 'Arquitectura', root_url
+        %li
+          = link_to 'Diseño Industrial', root_url
+        %li
+          = link_to 'Diseño Grafico y Multimedia', root_url
+        %li
+          = link_to 'Ingeniería Mecánica', root_url
+        %li
+          = link_to 'Ingeniería Civil', root_url
 
-    -#<div id="main_wrapper">
-    -#  <div id="menu2" class="container">
-    -#    <div class="content">
-    -#      <a class="btn-resposive"><span class="icon-menu"></span></a>
-    -#      <div class="clear"></div>
-    -#      <ul class="items">
-    -#        <li><a href="#header" data-ref="header">Arquitectura</a></li>
-    -#        <li><a href="#evento" data-ref="evento">Diseño Industrial</a></li>
-    -#        <li><a href="#cronograma" data-ref="cronograma">Diseño Grafico y Multimedia</a></li>
-    -#        <li><a href="#inversion" data-ref="inversion">Ingeniería Mecánica</a></li>
-    -#        <li><a href="#lideres" data-ref="lideres">Ingeniería Civil</a></li>
-    -#      </ul>
-    -#    </div>
-    -#  </div>
-    -#</div>
-    -#
-
-    .section.home
-      %img.img-responsive{:alt => "image", :src => image_path('bg-home.jpg'), :class => "img-home"}
+  %div.container
+    %div.col-sm-12
+      %div.col-sm-9.alert.alert-success#imgs-cursos
+        %span cursos
+      %div.col-sm-3
+        %img.img-responsive{:alt => "image", :src => image_path('conviertete_lider.png'), :id => "lider-home"}
