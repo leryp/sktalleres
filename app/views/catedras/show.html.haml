@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @catedra.nombre
+%p
+  %b Descripcion:
+  = @catedra.descripcion
+%p
+  %b Logo url:
+  = @catedra.logo_url
+%p
+  %b Video url:
+  = @catedra.video_url
+
+= link_to 'Edit', edit_catedra_path(@catedra)
+\|
+= link_to 'Back', catedras_path

@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @area_estudio.nombre
+
+= link_to 'Edit', edit_area_estudio_path(@area_estudio)
+\|
+= link_to 'Back', area_estudios_path

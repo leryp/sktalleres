@@ -17,4 +17,5 @@
 //= require jasny/jasny-bootstrap.min
 //= require bootstrap
 //= require_tree .
+//= require_self
 

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @parametro.nombre
+%p
+  %b Valor:
+  = @parametro.valor
+
+= link_to 'Edit', edit_parametro_path(@parametro)
+\|
+= link_to 'Back', parametros_path

@@ -253,6 +253,7 @@ a.btn-registrate:active {
 #imgs-cursos img
 {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .btn-blue{
@@ -264,3 +265,46 @@ a.btn-registrate:active {
   font-weight: 600;
   font-size: 12px;
 }
+
+.footer{
+  background-color: #2a2a2a;
+}
+
+.footer-content{
+  width: 75%;
+  margin: auto;
+}
+
+
+
+#lista_logos_footer li, #lista_menu_footer li{
+  display: inline-block;
+  padding-right: 10px;
+  color: #686868;
+}
+
+#lista_menu_footer li{
+  padding-right: 25px;
+}
+
+#lista_logos_footer {
+  padding-top: 10px;
+  padding-left: 0px;
+}
+
+#lista_menu_footer{
+  padding-top: 15px;
+}
+
+#row_top_footer{
+  border-bottom: 1px solid #686868;
+}
+
+#row_bottom_footer{
+  color: #686868;
+}
+
+.col_bottom_footer {
+  border-right: 1px solid #686868 ;
+}
+

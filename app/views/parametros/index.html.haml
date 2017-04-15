@@ -1,0 +1,23 @@
+%h1 Listing parametros
+
+%table
+  %thead
+    %tr
+      %th Nombre
+      %th Valor
+      %th
+      %th
+      %th
+
+  %tbody
+    - @parametros.each do |parametro|
+      %tr
+        %td= parametro.nombre
+        %td= parametro.valor
+        %td= link_to 'Show', parametro
+        %td= link_to 'Edit', edit_parametro_path(parametro)
+        %td= link_to 'Destroy', parametro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Parametro', new_parametro_path

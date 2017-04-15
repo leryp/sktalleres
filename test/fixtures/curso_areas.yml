@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  curso_id: 
+  area_estudio_id: 
+
+two:
+  status: MyString
+  curso_id: 
+  area_estudio_id: 

@@ -1,0 +1,21 @@
+%h1 Listing area_estudios
+
+%table
+  %thead
+    %tr
+      %th Nombre
+      %th
+      %th
+      %th
+
+  %tbody
+    - @area_estudios.each do |area_estudio|
+      %tr
+        %td= area_estudio.nombre
+        %td= link_to 'Show', area_estudio
+        %td= link_to 'Edit', edit_area_estudio_path(area_estudio)
+        %td= link_to 'Destroy', area_estudio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Area estudio', new_area_estudio_path

@@ -1,0 +1,27 @@
+%h1 Listing catedras
+
+%table
+  %thead
+    %tr
+      %th Nombre
+      %th Descripcion
+      %th Logo url
+      %th Video url
+      %th
+      %th
+      %th
+
+  %tbody
+    - @catedras.each do |catedra|
+      %tr
+        %td= catedra.nombre
+        %td= catedra.descripcion
+        %td= catedra.logo_url
+        %td= catedra.video_url
+        %td= link_to 'Show', catedra
+        %td= link_to 'Edit', edit_catedra_path(catedra)
+        %td= link_to 'Destroy', catedra, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Catedra', new_catedra_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @curso.nombre
+%p
+  %b Descripcion:
+  = @curso.descripcion
+%p
+  %b Contenido:
+  = @curso.contenido
+%p
+  %b Dirigido a:
+  = @curso.dirigido_a
+%p
+  %b Back img:
+  = @curso.back_img
+
+= link_to 'Edit', edit_curso_path(@curso)
+\|
+= link_to 'Back', cursos_path

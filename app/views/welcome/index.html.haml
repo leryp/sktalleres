@@ -74,23 +74,27 @@
               %br
               %br
               %button.btn-green Comienza ahora
+
   %div#menu-software.container
     %nav
       %ul.items
-        %li.active
-          = link_to 'Arquitectura', root_url
-        %li
-          = link_to 'Diseño Industrial', root_url
-        %li
-          = link_to 'Diseño Grafico y Multimedia', root_url
-        %li
-          = link_to 'Ingeniería Mecánica', root_url
-        %li
-          = link_to 'Ingeniería Civil', root_url
+
+        - @area_estudios.each do | value |
+          - if @area_estudio_id.to_i == value.id
+            %li.active
+              = link_to value.nombre, catedras_welcome_path(value.id)
+          - else
+            %li
+              = link_to value.nombre, catedras_welcome_path(value.id)
+
+
 
   %div.container
     %div.col-sm-12
-      %div.col-sm-9.alert.alert-success#imgs-cursos
-        %span cursos
+      %div.col-sm-9#imgs-cursos
+        - @catedras.each do | value |
+          %div.col-sm-6
+            %img.img-responsive.thumbnail{:alt => "image", :src => image_path(value.image_background_url), :width => '40%'}
+            -#= value.nombre
       %div.col-sm-3
-        %img.img-responsive{:alt => "image", :src => image_path('conviertete_lider.png'), :id => "lider-home"}
+        %img.img-responsive.thumbnail{:alt => "image", :src => image_path('conviertete_lider.png'), :id => "lider-home"}
