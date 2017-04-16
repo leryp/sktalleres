@@ -306,5 +306,15 @@ a.btn-registrate:active {
 
 .col_bottom_footer {
   border-right: 1px solid #686868 ;
+
+}
+
+.col_bottom_footer, .col_bottom_footer_last{
+  margin-top: 25px;
+  height: 135px;
+}
+
+.col_bottom_footer >div, .col_bottom_footer_last >ul{
+  margin-top: 15px;
 }
 
