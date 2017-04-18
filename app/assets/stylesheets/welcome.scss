@@ -1,5 +1,6 @@
 body{
   padding-top: 0px !important;
+  font-family: lato;
 }
 #barra_1{
   height: 34px;
@@ -61,6 +62,12 @@ span.amarillo{
   color: #404344;
 }
 
+#main-header a:hover{
+  background: transparent;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 #main-menu .last{
   border-right:  1px solid #cccccc !important;
 }
@@ -98,7 +105,7 @@ span.amarillo{
 #background_principal{
 
   height: 528px;
-  background: url("../img/background.jpg");
+  background: url("background_principal.png");
   background-size: cover;
 }
 
@@ -314,7 +321,66 @@ a.btn-registrate:active {
   height: 135px;
 }
 
+
 .col_bottom_footer >div, .col_bottom_footer_last >ul{
   margin-top: 15px;
 }
+
+.col_bottom_footer.primera > div{
+  margin-top: 80px;
+}
+
+.col_bottom_footer ul{
+  padding-left: 20px;
+}
+
+.col_bottom_footer_last ul{
+  list-style: none;
+}
+
+.thumbnail{
+//  border: none !important;
+}
+#home-bottom{
+  text-align: center;
+  font-weight: bold;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  margin-top: 10px;
+
+}
+#home-bottom >div{
+  margin-top: 20px;
+}
+.titulo1{
+  color: #0068cf;
+}
+#titulos .titulo1{
+  font-size: 38px;
+}
+
+#titulos .titulo2{
+  color: #404344;
+  font-size: 21px;
+}
+
+#home-bottom #subtitulos{
+  font-size: 20px;
+}
+
+#subtitulos span{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#subtitulos >div{
+  padding: 80px;
+}
+#subtitulos >div img{
+  margin: auto;
+}
+
+
+
+
 
