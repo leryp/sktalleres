@@ -70,6 +70,6 @@ end
 
 #revisar en çonfig/environments/development.rb
 #correo en http://127.0.0.1:1080
-gem 'mailcatcher'
+#gem 'mailcatcher'
 
 
