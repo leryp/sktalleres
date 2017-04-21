@@ -1,0 +1,55 @@
+#div_nosotros{
+  background-color: #e6e6e6;
+}
+
+#background_nosotros{
+
+  height: 693px;
+  background: url("background_nosotros.png");
+  background-size: cover;
+}
+
+#menu-software{
+  margin-top: 44px;
+  margin-bottom: 44px;
+  cursor: pointer;
+}
+#menu-software nav li{
+  padding: 10px 39px;
+  display: inline-block;
+  border: 1px solid #0068cf;
+  margin-left: 0px;
+  color: #0068cf;
+  font-weight: 600;
+}
+
+#menu-software nav li.active{
+  background-color: #0068cf;
+}
+
+#menu-software nav li.active {
+  color: #ffffff;
+}
+
+.titulo1{
+  color: #0068cf;
+  font-size: 31px;
+  text-align: center;
+}
+
+.texto_span{
+  text-align: center;
+  font-size: 19px;
+}
+
+#autodesk{
+  margin-top: 90px;
+}
+
+#content-nosotros .logo{
+  width: 70%;
+}
+
+#content-nosotros img{
+  width: 100%;
+}

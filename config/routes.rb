@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :area_estudios
 
   get 'welcome/index/:id', to: 'welcome#index', as: :catedras_welcome
+  get 'nosotros/', to: 'nosotros#index', as: :nosotros_view
   #
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,127 +1,90 @@
-.wrapper.wrapper-content.animated.fadeInRight
-  %div#barra_1
-    %div.container
-      %span.gris Atenci&oacute;n al Cliente
-      %span.amarillo +593 979355476
-
-  %div.container#cabecera
-    %div#barra_logos
-      %div.col-sm-3.col-md-3
-        %img.img-responsive{:alt => "image", :src => image_path('sktalleres.png'), :id => "logo_sk"}
-      %div.col-md-2.col-sm-offset-5.col-md-offset-5
-        %img.img-responsive{:alt => "image", :src => image_path('logo_atc_horizontal.png'), :width => '100%', :id => "logo_atc"}
-      %div.col-md-2
-        %img.img-responsive{:alt => "image", :src => image_path('logo_autodesk.png'), :width => '100%', :id => "logo_autodesk"}
-
-  %nav.navbar.main-header#main-header{role: "navigation" }
-    %div.container
-      .navbar-header
-        %button.navbar-toggle{ "data-toggle"=> "collapse", "data-target"=>"#bs-example-navbar-collapse-1" }
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        %a.navbar-brand{href: "#"}
-      %div#bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.nav-pills#main-menu
+%div
+  %div#background_principal
+    %div#formulario
+      %nav
+        %ul
           %li
-            = link_to 'Inicio', root_url
+            %a.btn-perfil.btn-registrate Reg&iacute;strate
           %li
-            = link_to 'Nosotros', root_url
+            %a.btn-perfil Iniciar sesi&oacute;n
+      %p.subtitulo Primer Curso  Gratis
+      %form
+        %div.col-sm-12
+          = text_field_tag 'nombre','', {class: 'form-control field-izq col-sm-6', placeholder: "Nombre *"  }
+          = text_field_tag 'apellido','',{class: 'form-control field-der col-sm-6', placeholder: "Apellido *"  }
+        %div.col-sm-12
+          = text_field_tag 'cedula','', {class: 'form-control field-izq col-sm-6', placeholder: "Cedula *"  }
+          = text_field_tag 'telefono','',{class: 'form-control field-der col-sm-6', placeholder: "Telefono *"  }
+        %div.col-sm-12
+          = text_field_tag 'email','', {class: 'form-control field col-sm-12', placeholder: "Correo Electronico *"  }
+        %div.col-sm-12
+          = text_field_tag 'password','', {class: 'form-control field col-sm-12', placeholder: "Contrasena *"  }
+        %div.col-sm-12.options
+          %p.subtitulo-2
+            ¿Qu&eacute; te gustar&iacute;a aprender?
+            %em (Selecciona varias opciones)
+          %div.col-sm-12
+            = check_box_tag('arquitectura','arquitectura',false)
+            %span Software de Arquitectura
+            %br
+            = check_box_tag('arquitectura','arquitectura',false)
+            %span Software de Ingenier&iacute;a y Dise&ntilde;o Industrial
+            %br
+            = check_box_tag('arquitectura','arquitectura',false)
+            %span Software de Animaci&oacute;n 3D
+            %br
+            = check_box_tag('arquitectura','arquitectura',false)
+            %span Curso de Fotograf&iacute;a
+            %br
+            %br
+            %button.btn-green Comienza ahora
+
+%div#menu-software.container
+  %nav
+    %ul.items
+      - @area_estudios.each do | value |
+        - if @area_estudio_id.to_i == value.id
+          %li.active
+            = link_to value.nombre, catedras_welcome_path(value.id)
+        - else
           %li
-            = link_to 'Contacto', root_url
-          %li
-            = link_to 'Cursos', root_url
-          %li.hidden-sm-down.last
-            = link_to 'Certificacion', root_url
-  %div
-    %div#background_principal
-      %div#formulario
-        %nav
-          %ul
-            %li
-              %a.btn-perfil.btn-registrate Reg&iacute;strate
-            %li
-              %a.btn-perfil Iniciar sesi&oacute;n
-        %p.subtitulo Primer Curso  Gratis
-        %form
-          %div.col-sm-12
-            = text_field_tag 'nombre','', {class: 'form-control field-izq col-sm-6', placeholder: "Nombre *"  }
-            = text_field_tag 'apellido','',{class: 'form-control field-der col-sm-6', placeholder: "Apellido *"  }
-          %div.col-sm-12
-            = text_field_tag 'cedula','', {class: 'form-control field-izq col-sm-6', placeholder: "Cedula *"  }
-            = text_field_tag 'telefono','',{class: 'form-control field-der col-sm-6', placeholder: "Telefono *"  }
-          %div.col-sm-12
-            = text_field_tag 'email','', {class: 'form-control field col-sm-12', placeholder: "Correo Electronico *"  }
-          %div.col-sm-12
-            = text_field_tag 'password','', {class: 'form-control field col-sm-12', placeholder: "Contrasena *"  }
-          %div.col-sm-12.options
-            %p.subtitulo-2
-              ¿Qu&eacute; te gustar&iacute;a aprender?
-              %em (Selecciona varias opciones)
-            %div.col-sm-12
-              = check_box_tag('arquitectura','arquitectura',false)
-              %span Software de Arquitectura
-              %br
-              = check_box_tag('arquitectura','arquitectura',false)
-              %span Software de Ingenier&iacute;a y Dise&ntilde;o Industrial
-              %br
-              = check_box_tag('arquitectura','arquitectura',false)
-              %span Software de Animaci&oacute;n 3D
-              %br
-              = check_box_tag('arquitectura','arquitectura',false)
-              %span Curso de Fotograf&iacute;a
-              %br
-              %br
-              %button.btn-green Comienza ahora
-
-  %div#menu-software.container
-    %nav
-      %ul.items
-
-        - @area_estudios.each do | value |
-          - if @area_estudio_id.to_i == value.id
-            %li.active
-              = link_to value.nombre, catedras_welcome_path(value.id)
-          - else
-            %li
-              = link_to value.nombre, catedras_welcome_path(value.id)
+            = link_to value.nombre, catedras_welcome_path(value.id)
 
 
 
-  %div.container
-    %div.col-sm-12
-      %div.col-sm-9#imgs-cursos
-        - @catedras.each do | value |
-          %div.col-sm-6
-            %img.img-responsive.thumbnail{:alt => "image", :src => image_path(value.image_background_url), :width => '40%'}
-            -#= value.nombre
-      %div.col-sm-3
-        %img.img-responsive.thumbnail{:alt => "image", :src => image_path('conviertete_lider.png'), :id => "lider-home"}
-        %img.img-responsive.thumbnail{:alt => "image", :src => image_path('facilidad_pago.png'), :id => "pago-home"}
+%div.container
+  %div.col-sm-12
+    %div.col-sm-9#imgs-cursos
+      - @catedras.each do | value |
+        %div.col-sm-6
+          %img.img-responsive.thumbnail{:alt => "image", :src => image_path(value.image_background_url), :width => '40%'}
+          -#= value.nombre
+    %div.col-sm-3
+      %img.img-responsive.thumbnail{:alt => "image", :src => image_path('conviertete_lider.png'), :id => "lider-home"}
+      %img.img-responsive.thumbnail{:alt => "image", :src => image_path('facilidad_pago.png'), :id => "pago-home"}
 
-  %div#home-bottom.container
-    %div#titulos.col-sm-12
-      %p.titulo1 ¿Por qué SK Talleres?
-      %p.titulo2 Algunas buenas razones para elegirnos
+%div#home-bottom.container
+  %div#titulos.col-sm-12
+    %p.titulo1 ¿Por qué SK Talleres?
+    %p.titulo2 Algunas buenas razones para elegirnos
 
-    .row#subtitulos
-      .col-sm-4
-        %img.img-responsive{:alt => "image", :src => image_path('medalla.png'), :id => "medalla-home"}
-        %br
-        %p.titulo1 CALIDAD DE CURSOS Y CONTENIDO
-        %span Cada uno de los contenidos esta creado pensando en tu formacion, nos enfocamos siempre en crear herramientas que te permiten crear proyectos de exito.
-      .col-sm-4
-        %img.img-responsive{:alt => "image", :src => image_path('apreton_manos.png'), :id => "apreton-home"}
-        %br
-        %p.titulo1 CONFIAMOS EN TI
-        %span Y por eso te damos todas las facilidades de pago, podr&aacute; escoger la modalidad de tu preferencia.
-      .col-sm-4
-        %img.img-responsive{:alt => "image", :src => image_path('biceps.png'), :id => "biceps-home"}
-        %br
-        %p.titulo1 ESFUERZO
-        %span Personalizamos cada uno de los contenidos y realmente nos esforzamos para que aprendas, siempre tendras a la mano las ultimas actualizaciones de los softwares que ensenamos.
+  .row#subtitulos
+    .col-sm-4
+      %img.img-responsive{:alt => "image", :src => image_path('medalla.png'), :id => "medalla-home"}
+      %br
+      %p.titulo1 CALIDAD DE CURSOS Y CONTENIDO
+      %span Cada uno de los contenidos esta creado pensando en tu formacion, nos enfocamos siempre en crear herramientas que te permiten crear proyectos de exito.
+    .col-sm-4
+      %img.img-responsive{:alt => "image", :src => image_path('apreton_manos.png'), :id => "apreton-home"}
+      %br
+      %p.titulo1 CONFIAMOS EN TI
+      %span Y por eso te damos todas las facilidades de pago, podr&aacute; escoger la modalidad de tu preferencia.
+    .col-sm-4
+      %img.img-responsive{:alt => "image", :src => image_path('biceps.png'), :id => "biceps-home"}
+      %br
+      %p.titulo1 ESFUERZO
+      %span Personalizamos cada uno de los contenidos y realmente nos esforzamos para que aprendas, siempre tendras a la mano las ultimas actualizaciones de los softwares que ensenamos.
 
 
-  %br
-  %br
+%br
+%br
