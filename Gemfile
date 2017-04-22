@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use pg as the database for Active Record
+
+ruby '2.2.0'
 
 gem 'pg'
 # Use SCSS for stylesheets
@@ -70,4 +71,5 @@ end
 #revisar en çonfig/environments/development.rb
 #correo en http://127.0.0.1:1080
 gem 'mailcatcher'
+
 
