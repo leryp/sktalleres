@@ -1,0 +1,17 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  username: postgres
+  password: 123456
+
+development:
+  <<: *default
+  database: Sktalleres_development
+
+test:
+  <<: *default
+  database:  Sktalleres_test
+
+production:
+  <<: *default
+  database:  Sktalleres_production
