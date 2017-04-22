@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # Use pg as the database for Active Record
 
-ruby '2.2.0'
+# ruby '2.2.0'
 
 gem 'pg'
 # Use SCSS for stylesheets
@@ -72,4 +72,5 @@ end
 #correo en http://127.0.0.1:1080
 #gem 'mailcatcher'
 
-
+gem 'rails_12factor', group: :production
+gem 'puma'
